@@ -1,0 +1,9 @@
+project: savantenvs/neomutt
+target: body-fuzz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/body-fuzz/testsuite
+cmds:
+  - cmd: /mayhem/body-fuzz
+    libfuzzer: true
+    timeout: 5

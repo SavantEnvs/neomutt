@@ -1,0 +1,9 @@
+project: savantenvs/neomutt
+target: address-fuzz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/address-fuzz/testsuite
+cmds:
+  - cmd: /mayhem/address-fuzz
+    libfuzzer: true
+    timeout: 5

@@ -1,0 +1,9 @@
+project: savantenvs/neomutt
+target: cli-fuzz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/cli-fuzz/testsuite
+cmds:
+  - cmd: /mayhem/cli-fuzz
+    libfuzzer: true
+    timeout: 5

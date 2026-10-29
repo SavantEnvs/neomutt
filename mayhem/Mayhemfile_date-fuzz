@@ -1,0 +1,9 @@
+project: savantenvs/neomutt
+target: date-fuzz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/date-fuzz/testsuite
+cmds:
+  - cmd: /mayhem/date-fuzz
+    libfuzzer: true
+    timeout: 5

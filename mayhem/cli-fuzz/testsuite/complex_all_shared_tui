@@ -1,0 +1,1 @@
+-v -n -F config.rc -e "set sort=date" -d 2 -l debug.log -f inbox
