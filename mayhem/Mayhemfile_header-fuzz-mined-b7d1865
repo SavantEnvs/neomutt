@@ -1,0 +1,10 @@
+# seed-from: https://app.mayhem.security/savantenvs/neomutt/body-fuzz
+project: savantenvs/neomutt
+target: header-fuzz-mined-b7d1865
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/header-fuzz-mined-b7d1865/testsuite
+cmds:
+  - cmd: /mayhem/header-fuzz
+    libfuzzer: true
+    timeout: 5
